@@ -441,8 +441,9 @@ class _MainScreenState extends State<MainScreen> {
                               color: textColor,
                             ),
                           ),
-                          const Spacer(),
                           FloatingActionButton(
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
                             backgroundColor: color3,
                             onPressed: _incrementCounter3,
                             child: const Icon(
