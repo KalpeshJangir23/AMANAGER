@@ -33,6 +33,8 @@ class _MainScreenState extends State<MainScreen> {
   double _percentage5 = 0;
   double round_result5 = 0;
   double percentage = 0;
+  double pers = 0;
+  double pc = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -150,6 +152,10 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var sum =
+        _counter + _counter1 + _counter2 + _counter3 + _counter4 + _counter5;
+    var pers = sum / 210 * 100;
+    var pc = pers.roundToDouble();
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -376,7 +382,7 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                           child: Center(
                             child: Text(
-                              '$sum%',
+                              '$pc%',
                               style: GoogleFonts.averiaGruesaLibre(
                                 fontSize: 48,
                                 color: textColor,
