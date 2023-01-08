@@ -419,7 +419,7 @@ class _MainScreenState extends State<MainScreen> {
                             child: Text(
                               'Operating System',
                               style: GoogleFonts.averiaGruesaLibre(
-                                  fontSize: containertext - 3,
+                                  fontSize: containertext - 5,
                                   fontWeight: FontWeight.bold,
                                   color: textColor),
                             ),
@@ -437,10 +437,11 @@ class _MainScreenState extends State<MainScreen> {
                           Text(
                             '$round_result3%',
                             style: GoogleFonts.averiaGruesaLibre(
-                              fontSize: counter_text_size - 5,
+                              fontSize: counter_text_size - 3,
                               color: textColor,
                             ),
                           ),
+                          const Spacer(),
                           FloatingActionButton(
                             materialTapTargetSize:
                                 MaterialTapTargetSize.shrinkWrap,
@@ -478,7 +479,8 @@ class _MainScreenState extends State<MainScreen> {
                             child: Text(
                               'Microprocessor',
                               style: GoogleFonts.averiaGruesaLibre(
-                                  fontSize: containertext, color: textColor),
+                                  fontSize: containertext - 3,
+                                  color: textColor),
                             ),
                           ),
                           const Divider(
