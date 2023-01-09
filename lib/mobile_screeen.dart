@@ -95,6 +95,47 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: mainbackground,
                           ),
                         ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Container(
+                                width: 185,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                  border: Border.all(
+                                    width: 2,
+                                    color: containerColor,
+                                  ),
+                                ),
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: TextField(
+                                      style: GoogleFonts.averiaGruesaLibre(
+                                          fontSize: 23, color: textColor),
+                                      decoration: InputDecoration(
+                                        border: const OutlineInputBorder(),
+                                        labelText: 'Subject-01',
+                                        labelStyle:
+                                            GoogleFonts.averiaGruesaLibre(
+                                                fontSize: 9, color: color2),
+                                        filled: true,
+                                        fillColor: color3,
+                                        hintText: "Enter a  Subject",
+                                        hintStyle:
+                                            GoogleFonts.averiaGruesaLibre(
+                                                fontSize: 10,
+                                                color: mainbackground),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
 
