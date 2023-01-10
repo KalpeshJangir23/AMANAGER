@@ -116,11 +116,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                       style: GoogleFonts.averiaGruesaLibre(
                                           fontSize: 23, color: textColor),
                                       decoration: InputDecoration(
-                                        border: const OutlineInputBorder(),
-                                        labelText: 'Subject-01',
-                                        labelStyle:
-                                            GoogleFonts.averiaGruesaLibre(
-                                                fontSize: 9, color: color2),
+                                        border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                        ),
                                         filled: true,
                                         fillColor: color3,
                                         hintText: "Enter a  Subject",
@@ -246,6 +245,313 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
 
                     //
+                  ],
+                ),
+              ),
+            ),
+            Center(
+              child: Text(
+                'ASSIGNMENT',
+                style: GoogleFonts.averiaGruesaLibre(
+                  letterSpacing: 15,
+                  color: textColor,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Container(
+                        height: 400,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          color: containerColor,
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(
+                            width: 2,
+                            color: mainbackground,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Container(
+                                height: 400,
+                                width: 300,
+                                decoration: BoxDecoration(
+                                  color: containerColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                  border: Border.all(
+                                    width: 2,
+                                    color: mainbackground,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: Container(
+                                        height: 400,
+                                        width: 300,
+                                        decoration: BoxDecoration(
+                                          color: containerColor,
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          border: Border.all(
+                                            width: 2,
+                                            color: mainbackground,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: SingleChildScrollView(
+                                        scrollDirection: Axis.horizontal,
+                                        child: Row(
+                                          children: <Widget>[
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(4.0),
+                                              child: Container(
+                                                height: 400,
+                                                width: 300,
+                                                decoration: BoxDecoration(
+                                                  color: containerColor,
+                                                  borderRadius:
+                                                      BorderRadius.circular(30),
+                                                  border: Border.all(
+                                                    width: 2,
+                                                    color: mainbackground,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: SingleChildScrollView(
+                                                scrollDirection:
+                                                    Axis.horizontal,
+                                                child: Row(
+                                                  children: <Widget>[
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              4.0),
+                                                      child: Container(
+                                                        height: 400,
+                                                        width: 300,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: containerColor,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(30),
+                                                          border: Border.all(
+                                                            width: 2,
+                                                            color:
+                                                                mainbackground,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              10.0),
+                                                      child:
+                                                          SingleChildScrollView(
+                                                        scrollDirection:
+                                                            Axis.horizontal,
+                                                        child: Row(
+                                                          children: <Widget>[
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .all(4.0),
+                                                              child: Container(
+                                                                height: 400,
+                                                                width: 300,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color:
+                                                                      containerColor,
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              30),
+                                                                  border: Border
+                                                                      .all(
+                                                                    width: 2,
+                                                                    color:
+                                                                        mainbackground,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .all(
+                                                                      10.0),
+                                                              child:
+                                                                  SingleChildScrollView(
+                                                                scrollDirection:
+                                                                    Axis.horizontal,
+                                                                child: Row(
+                                                                  children: <
+                                                                      Widget>[
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets.all(
+                                                                              4.0),
+                                                                      child:
+                                                                          Container(
+                                                                        height:
+                                                                            400,
+                                                                        width:
+                                                                            300,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color:
+                                                                              containerColor,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(30),
+                                                                          border:
+                                                                              Border.all(
+                                                                            width:
+                                                                                2,
+                                                                            color:
+                                                                                mainbackground,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .all(
+                                                                          10.0),
+                                                                      child:
+                                                                          SingleChildScrollView(
+                                                                        scrollDirection:
+                                                                            Axis.horizontal,
+                                                                        child:
+                                                                            Row(
+                                                                          children: <
+                                                                              Widget>[
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.all(4.0),
+                                                                              child: Container(
+                                                                                height: 400,
+                                                                                width: 300,
+                                                                                decoration: BoxDecoration(
+                                                                                  color: containerColor,
+                                                                                  borderRadius: BorderRadius.circular(30),
+                                                                                  border: Border.all(
+                                                                                    width: 2,
+                                                                                    color: mainbackground,
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.all(10.0),
+                                                                              child: SingleChildScrollView(
+                                                                                scrollDirection: Axis.horizontal,
+                                                                                child: Row(
+                                                                                  children: <Widget>[
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsets.all(4.0),
+                                                                                      child: Container(
+                                                                                        height: 400,
+                                                                                        width: 300,
+                                                                                        decoration: BoxDecoration(
+                                                                                          color: containerColor,
+                                                                                          borderRadius: BorderRadius.circular(30),
+                                                                                          border: Border.all(
+                                                                                            width: 2,
+                                                                                            color: mainbackground,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsets.all(10.0),
+                                                                                      child: SingleChildScrollView(
+                                                                                        scrollDirection: Axis.horizontal,
+                                                                                        child: Row(
+                                                                                          children: <Widget>[
+                                                                                            Padding(
+                                                                                              padding: const EdgeInsets.all(4.0),
+                                                                                              child: Container(
+                                                                                                height: 400,
+                                                                                                width: 300,
+                                                                                                decoration: BoxDecoration(
+                                                                                                  color: containerColor,
+                                                                                                  borderRadius: BorderRadius.circular(30),
+                                                                                                  border: Border.all(
+                                                                                                    width: 2,
+                                                                                                    color: mainbackground,
+                                                                                                  ),
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                          ],
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
