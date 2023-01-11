@@ -5,7 +5,6 @@ import 'package:mannager/utils/colors.dart';
 
 class Home2Screen extends StatefulWidget {
   const Home2Screen({super.key});
-
   @override
   State<Home2Screen> createState() => _Home2ScreenState();
 }
@@ -20,7 +19,6 @@ class _Home2ScreenState extends State<Home2Screen> {
         color: mainbackground,
         child: Column(
           children: [
-            /////////////////////////////////SIZE BOX/////////////////////////////////
             const SizedBox(
               height: 30,
             ),
@@ -34,7 +32,6 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ),
               ),
             ),
-
             Padding(
               padding:
                   const EdgeInsets.only(bottom: 0, left: 8, right: 0, top: 10),
@@ -69,6 +66,28 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ],
               ),
             ),
+            Container(
+              height: 70,
+              width: 300,
+              decoration: BoxDecoration(
+                color: greenContainer,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  width: 2,
+                  color: mainbackground,
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  '75%',
+                  style: GoogleFonts.averiaGruesaLibre(
+                    color: textColor,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
