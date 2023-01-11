@@ -11,8 +11,51 @@ class Home2Screen extends StatefulWidget {
 }
 
 class _Home2ScreenState extends State<Home2Screen> {
+  double _counter1 = 0;
+  double _counter2 = 0;
+  double _counter3 = 0;
+  double _counter4 = 0;
+  double _counter5 = 0;
+  double pc = 0;
+  double _percentage1 = 0;
+  double round_result1 = 0;
+  void _incrementCounter1() {
+    setState(() {
+      _counter1++;
+      _percentage1 = _counter1 / 35 * 100;
+      round_result1 = _percentage1.roundToDouble();
+      if (_counter1 > 35) {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return const AlertDialog(
+              title: Text('Error'),
+              content: Text('The value exceeds the maximum allowed'),
+            );
+          },
+        );
+      }
+    });
+  }
+
+  void _decrementCounter1() {
+    setState(() {
+      _counter1--;
+      _percentage1 = _counter1 / 35 * 100;
+      round_result1 = _percentage1.roundToDouble();
+      if (_counter1 < 0) {
+        _counter1 = 0;
+        round_result1 = 0;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    var sum = _counter1 + _counter2 + _counter3 + _counter4 + _counter5;
+    var pers = sum / 210 * 100;
+    var pc = pers.roundToDouble();
+
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -84,13 +127,21 @@ class _Home2ScreenState extends State<Home2Screen> {
               ),
               child: Center(
                 child: Text(
-                  '75%',
+                  '$pc%',
                   style: GoogleFonts.averiaGruesaLibre(
-                    color: textColor,
                     fontSize: 25,
+                    color: textColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                // Text(
+                //   '75%',
+                //   style: GoogleFonts.averiaGruesaLibre(
+                //     color: textColor,
+                //     fontSize: 25,
+                //     fontWeight: FontWeight.bold,
+                //   ),
+                // ),
               ),
             ),
             // Single child scroll view for appending the data
@@ -114,6 +165,7 @@ class _Home2ScreenState extends State<Home2Screen> {
                             color: mainbackground,
                           ),
                         ),
+                        /////////////COLUMN START FROM HERE//////////////////////////
                         child: Column(
                           children: <Widget>[
                             const SizedBox(
@@ -123,53 +175,54 @@ class _Home2ScreenState extends State<Home2Screen> {
                               child: Text(
                                 'Mathematics',
                                 style: GoogleFonts.averiaGruesaLibre(
-                                    fontSize: containertext, color: textColor),
+                                    fontSize: containertext - 10,
+                                    color: textColor),
                               ),
                             ),
                             const Divider(
                               color: iconColor,
                               thickness: 2,
                             ),
-                            // Text(
-                            //   '$_counter',
-                            //   style: GoogleFonts.averiaGruesaLibre(
-                            //       fontSize: counter_text_size,
-                            //       color: counter_text_color),
-                            // ),
-                            // Text(
-                            //   '$round_result%',
-                            //   style: GoogleFonts.averiaGruesaLibre(
-                            //     fontSize: counter_text_size - 5,
-                            //     color: textColor,
-                            //   ),
-                            // ),
+                            Text(
+                              '$_counter1/35',
+                              style: GoogleFonts.averiaGruesaLibre(
+                                  fontSize: counter_text_size,
+                                  color: counter_text_color),
+                            ),
+                            Text(
+                              '$round_result1%',
+                              style: GoogleFonts.averiaGruesaLibre(
+                                fontSize: counter_text_size - 5,
+                                color: textColor,
+                              ),
+                            ),
                             const Spacer(),
                             // ///////////// ROW  for button  /////////
                             Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Row(
-                                children: const <Widget>[
-                                  Spacer(),
+                                children: <Widget>[
+                                  const Spacer(),
                                   FloatingActionButton(
                                     backgroundColor: color2,
-                                    onPressed: null,
-                                    child: Icon(
+                                    onPressed: _incrementCounter1,
+                                    child: const Icon(
                                       Icons.add,
                                       color: mainbackground,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   FloatingActionButton(
                                     backgroundColor: color2,
-                                    onPressed: null,
-                                    child: Icon(
+                                    onPressed: _decrementCounter1,
+                                    child: const Icon(
                                       Icons.remove,
                                       color: mainbackground,
                                     ),
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                 ],
                               ),
                             ),
