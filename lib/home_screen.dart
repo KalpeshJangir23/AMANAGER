@@ -22,6 +22,7 @@ class _Home2ScreenState extends State<Home2Screen> {
             const SizedBox(
               height: 30,
             ),
+            // Attendance Label
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Center(
@@ -32,9 +33,10 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ),
               ),
             ),
+            // today label
             Padding(
               padding:
-                  const EdgeInsets.only(bottom: 0, left: 8, right: 0, top: 10),
+                  const EdgeInsets.only(bottom: 0, left: 8, right: 0, top: 3),
               child: Row(
                 children: [
                   Text(
@@ -48,6 +50,7 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ],
               ),
             ),
+            // Date and Day
             Padding(
               padding:
                   const EdgeInsets.only(bottom: 10, left: 8, right: 0, top: 0),
@@ -66,6 +69,7 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ],
               ),
             ),
+            /////////////// attendance label ///////////////
             Container(
               height: 70,
               width: 300,
@@ -88,6 +92,7 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ),
               ),
             )
+            // Single child scroll view for appending the data
           ],
         ),
       ),
