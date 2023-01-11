@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mannager/utils/colors.dart';
+import 'package:mannager/utils/measurement.dart';
 
 class Home2Screen extends StatefulWidget {
   const Home2Screen({super.key});
@@ -91,8 +92,174 @@ class _Home2ScreenState extends State<Home2Screen> {
                   ),
                 ),
               ),
-            )
+            ),
             // Single child scroll view for appending the data
+
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 205,
+                        width: 205,
+                        decoration: BoxDecoration(
+                          color: color3,
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(
+                            width: 2,
+                            color: mainbackground,
+                          ),
+                        ),
+                        child: Column(
+                          children: <Widget>[
+                            const SizedBox(
+                              height: sizedBoxhieght,
+                            ),
+                            Center(
+                              child: Text(
+                                'Mathematics',
+                                style: GoogleFonts.averiaGruesaLibre(
+                                    fontSize: containertext, color: textColor),
+                              ),
+                            ),
+                            const Divider(
+                              color: iconColor,
+                              thickness: 2,
+                            ),
+                            // Text(
+                            //   '$_counter',
+                            //   style: GoogleFonts.averiaGruesaLibre(
+                            //       fontSize: counter_text_size,
+                            //       color: counter_text_color),
+                            // ),
+                            // Text(
+                            //   '$round_result%',
+                            //   style: GoogleFonts.averiaGruesaLibre(
+                            //     fontSize: counter_text_size - 5,
+                            //     color: textColor,
+                            //   ),
+                            // ),
+                            const Spacer(),
+                            // ///////////// ROW  for button  /////////
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Row(
+                                children: const <Widget>[
+                                  Spacer(),
+                                  FloatingActionButton(
+                                    backgroundColor: color2,
+                                    onPressed: null,
+                                    child: Icon(
+                                      Icons.add,
+                                      color: mainbackground,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  FloatingActionButton(
+                                    backgroundColor: color2,
+                                    onPressed: null,
+                                    child: Icon(
+                                      Icons.remove,
+                                      color: mainbackground,
+                                    ),
+                                  ),
+                                  Spacer(),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    ////////////// Close of First Container////////////////////
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 205,
+                        width: 205,
+                        decoration: BoxDecoration(
+                          color: color3,
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(
+                            width: 2,
+                            color: mainbackground,
+                          ),
+                        ),
+                        child: Column(
+                          children: <Widget>[
+                            const SizedBox(
+                              height: sizedBoxhieght,
+                            ),
+                            Center(
+                              child: Text(
+                                'Operating System',
+                                style: GoogleFonts.averiaGruesaLibre(
+                                    fontSize: containertext, color: textColor),
+                              ),
+                            ),
+                            const Divider(
+                              color: iconColor,
+                              thickness: 2,
+                            ),
+                            // Text(
+                            //   '$_counter',
+                            //   style: GoogleFonts.averiaGruesaLibre(
+                            //       fontSize: counter_text_size,
+                            //       color: counter_text_color),
+                            // ),
+                            // Text(
+                            //   '$round_result%',
+                            //   style: GoogleFonts.averiaGruesaLibre(
+                            //     fontSize: counter_text_size - 5,
+                            //     color: textColor,
+                            //   ),
+                            // ),
+                            const Spacer(),
+                            // ///////////// ROW  for button  /////////
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Row(
+                                children: const <Widget>[
+                                  Spacer(),
+                                  FloatingActionButton(
+                                    backgroundColor: color2,
+                                    onPressed: null,
+                                    child: Icon(
+                                      Icons.add,
+                                      color: mainbackground,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  FloatingActionButton(
+                                    backgroundColor: color2,
+                                    onPressed: null,
+                                    child: Icon(
+                                      Icons.remove,
+                                      color: mainbackground,
+                                    ),
+                                  ),
+                                  Spacer(),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    ////////////// Close of Second Container////////////////////
+                  ],
+                ),
+                /////////////////////close of scrollView///////////////////////
+              ),
+            ),
           ],
         ),
       ),

@@ -7,6 +7,6 @@ const double h_boxContainer = 150;
 const double h_circularContainer = 120;
 const double w_boxContainer = 150;
 const double w_circularContainer = 120;
-const double containertext = 17.5;
+const double containertext = 20;
 const double sizedBoxhieght = 8;
 const double counter_text_size = 14;
