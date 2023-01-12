@@ -24,8 +24,9 @@ class _Home2ScreenState extends State<Home2Screen> {
       _counter1++;
       _percentage1 = _counter1 / 35 * 100;
       round_result1 = _percentage1.roundToDouble();
-      if (_counter1 > 35) {
+      if (_counter1 > 34) {
         _counter1 = 35;
+        round_result1 = 100;
       }
     });
   }
