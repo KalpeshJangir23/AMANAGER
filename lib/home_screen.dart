@@ -25,15 +25,7 @@ class _Home2ScreenState extends State<Home2Screen> {
       _percentage1 = _counter1 / 35 * 100;
       round_result1 = _percentage1.roundToDouble();
       if (_counter1 > 35) {
-        showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            return const AlertDialog(
-              title: Text('Error'),
-              content: Text('The value exceeds the maximum allowed'),
-            );
-          },
-        );
+        _counter1 = 35;
       }
     });
   }
