@@ -106,39 +106,7 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ],
               ),
             ),
-            /////////////// attendance label ///////////////
-            Container(
-              height: 70,
-              width: 300,
-              decoration: BoxDecoration(
-                color: greenContainer,
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  width: 2,
-                  color: mainbackground,
-                ),
-              ),
-              child: Center(
-                child: Text(
-                  '$pc%',
-                  style: GoogleFonts.averiaGruesaLibre(
-                    fontSize: 25,
-                    color: textColor,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                // Text(
-                //   '75%',
-                //   style: GoogleFonts.averiaGruesaLibre(
-                //     color: textColor,
-                //     fontSize: 25,
-                //     fontWeight: FontWeight.bold,
-                //   ),
-                // ),
-              ),
-            ),
             // Single child scroll view for appending the data
-
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: SingleChildScrollView(
@@ -304,6 +272,30 @@ class _Home2ScreenState extends State<Home2Screen> {
                   ],
                 ),
                 /////////////////////close of scrollView///////////////////////
+              ),
+            ),
+            /////////////// Total Attendance view  ///////////////
+            Container(
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                color: greenContainer,
+                shape: BoxShape.circle,
+                //borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  width: 2,
+                  color: mainbackground,
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  '$pc%',
+                  style: GoogleFonts.averiaGruesaLibre(
+                    fontSize: 25,
+                    color: textColor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
