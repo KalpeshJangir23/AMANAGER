@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mannager/utils/colors.dart';
 import 'package:mannager/utils/measurement.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class Home2Screen extends StatefulWidget {
   const Home2Screen({super.key});
@@ -276,8 +277,8 @@ class _Home2ScreenState extends State<Home2Screen> {
             ),
             /////////////// Total Attendance view  ///////////////
             Container(
-              height: 200,
-              width: 200,
+              height: 150,
+              width: 150,
               decoration: BoxDecoration(
                 color: greenContainer,
                 shape: BoxShape.circle,
@@ -298,8 +299,32 @@ class _Home2ScreenState extends State<Home2Screen> {
                 ),
               ),
             ),
+            //Single child scroll view for appending the data - 2
+            // Bottom Navigation Bar
           ],
         ),
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        color: mainbackground,
+        buttonBackgroundColor: color3,
+        backgroundColor: greenContainer,
+        items: const [
+          Icon(
+            Icons.assignment,
+            color: textColor,
+            size: 25,
+          ),
+          Icon(
+            Icons.update,
+            color: textColor,
+            size: 25,
+          ),
+          Icon(
+            Icons.settings,
+            color: textColor,
+            size: 25,
+          ),
+        ],
       ),
     );
   }
