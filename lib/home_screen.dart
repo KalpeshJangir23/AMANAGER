@@ -115,7 +115,7 @@ class _Home2ScreenState extends State<Home2Screen> {
                 child: Row(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(2.0),
                       child: Container(
                         height: 205,
                         width: 205,
@@ -158,7 +158,7 @@ class _Home2ScreenState extends State<Home2Screen> {
                                 color: textColor,
                               ),
                             ),
-                            const Spacer(),
+
                             // ///////////// ROW  for button  /////////
                             Padding(
                               padding: const EdgeInsets.all(10.0),
