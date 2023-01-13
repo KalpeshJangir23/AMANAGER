@@ -117,8 +117,8 @@ class _Home2ScreenState extends State<Home2Screen> {
                     Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        height: 205,
-                        width: 205,
+                        height: 175,
+                        width: 175,
                         decoration: BoxDecoration(
                           color: color3,
                           borderRadius: BorderRadius.circular(30),
