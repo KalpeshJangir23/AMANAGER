@@ -31,7 +31,7 @@ class _Home2ScreenState extends State<Home2Screen> {
       }
     });
   }
-
+ 
   void _decrementCounter1() {
     setState(() {
       _counter1--;
@@ -43,6 +43,7 @@ class _Home2ScreenState extends State<Home2Screen> {
       }
     });
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -117,8 +118,8 @@ class _Home2ScreenState extends State<Home2Screen> {
                     Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        height: 175,
-                        width: 175,
+                        height: 195,
+                        width: 195,
                         decoration: BoxDecoration(
                           color: color3,
                           borderRadius: BorderRadius.circular(30),
@@ -305,9 +306,10 @@ class _Home2ScreenState extends State<Home2Screen> {
         ),
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        color: mainbackground,
+        color: greenContainer,
         buttonBackgroundColor: color3,
-        backgroundColor: greenContainer,
+        backgroundColor: mainbackground,
+      
         items: const [
           Icon(
             Icons.assignment,
