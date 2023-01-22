@@ -14,93 +14,322 @@ class _AttendancePageState extends State<AttendancePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white54,
+      backgroundColor: const Color.fromARGB(136, 215, 206, 206),
       appBar: AppBar(
         backgroundColor: mainbackground,
         elevation: 0.0,
-        title: Center(
-          child: Text("ATTENDANCE",
-              style: GoogleFonts.averiaGruesaLibre(
-                  letterSpacing: 15,
-                  color: textColor,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold)),
-        ),
-      ),
-      body: Column(
-        children: <Widget>[
-          Padding(
-            padding:
-                const EdgeInsets.only(bottom: 1, left: 15, right: 0, top: 3),
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    "ToDay",
-                    textAlign: TextAlign.left,
-                    style: GoogleFonts.inconsolata(
-                      fontSize: 25,
-                      color: textColor,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          // Date and Day
-          Row(
-            children: [
+        toolbarHeight: 105,
+        actions: [
+          Column(
+            children: <Widget>[
+              Center(
+                child: Text("ATTENDANCE",
+                    style: GoogleFonts.averiaGruesaLibre(
+                        letterSpacing: 15,
+                        color: textColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
+              ),
               Padding(
                 padding: const EdgeInsets.only(
-                    bottom: 15, left: 15, right: 0, top: 0),
+                    bottom: 1, left: 15, right: 0, top: 3),
                 child: Column(
                   children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        DateFormat.yMMMd().add_EEEE().format(DateTime.now()),
-                        style: GoogleFonts.averiaGruesaLibre(
-                            color: textColor,
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.w200),
-                      ),
+                    Row(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            "ToDay",
+                            textAlign: TextAlign.left,
+                            style: GoogleFonts.inconsolata(
+                              fontSize: 25,
+                              color: textColor,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ),
-              const SizedBox(
-                width: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
-                child: Container(
-                  height: 50,
-                  width: 95,
-                  decoration: BoxDecoration(
-                      color: mainbackground,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Center(
-                    child: Text(
-                      "75 %",
-                      style: GoogleFonts.averiaGruesaLibre(
-                        color: textColor,
-                        fontWeight: FontWeight.bold,
+              // Date and Day
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        bottom: 15, left: 15, right: 0, top: 0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            DateFormat.yMMMd()
+                                .add_EEEE()
+                                .format(DateTime.now()),
+                            style: GoogleFonts.averiaGruesaLibre(
+                                color: textColor,
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.w200),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    child: Container(
+                      height: 40,
+                      width: 95,
+                      decoration: BoxDecoration(
+                          color: lightblue,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Center(
+                        child: Text(
+                          "75 %",
+                          style: GoogleFonts.averiaGruesaLibre(
+                            color: textColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: SingleChildScrollView(
-              child: Column(children: []),
-            ),
-          )
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Center(
+            child: Column(
+              children: [
+                Container(
+                  height: 100,
+                  width: 320,
+                  //color: textColor,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+
+                Container(
+                  height: 100,
+                  width: 320,
+                  //color: textColor,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+
+                Container(
+                  height: 100,
+                  width: 320,
+                  //color: textColor,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //3nd Container
+                //
+
+                Container(
+                  height: 100,
+
+                  width: 320,
+                  //color: textColor,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+
+                Container(
+                  height: 100,
+                  width: 320,
+                  //color: textColor,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+
+                Container(
+                  height: 100,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+
+                Container(
+                  height: 100,
+                  width: 320,
+                  //color: textColor,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+
+                Container(
+                  height: 100,
+                  width: 320,
+                  //color: textColor,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+
+                Container(
+                  height: 100,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    color: textColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: const Offset(0, 3),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //
+                //2nd Container
+                //
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

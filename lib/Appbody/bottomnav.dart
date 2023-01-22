@@ -20,9 +20,10 @@ class _BottomNavState extends State<BottomNav> {
         child: getSelectedWidget(index: index),
       ),
       bottomNavigationBar: CurvedNavigationBar(
+        height: 60,
         color: const Color(0xffbae5f4),
         //color: colors.white,
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(136, 215, 206, 206),
         buttonBackgroundColor: const Color(0xffe2d2fe),
         index: index,
         items: const [

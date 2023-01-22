@@ -13,6 +13,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(136, 215, 206, 206),
       appBar: AppBar(
         backgroundColor: mainbackground,
         elevation: 0.0,
