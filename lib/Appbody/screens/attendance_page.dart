@@ -84,7 +84,7 @@ class _AttendancePageState extends State<AttendancePage> {
                     padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
                     child: Container(
                       height: 40,
-                      width: 95,
+                      width: 90,
                       decoration: BoxDecoration(
                           color: lightblue,
                           borderRadius: BorderRadius.circular(30)),
@@ -112,8 +112,11 @@ class _AttendancePageState extends State<AttendancePage> {
           child: Center(
             child: Column(
               children: [
+                //
+                // begining of new container
+                //
                 Container(
-                  height: 100,
+                  height: 150,
                   width: 320,
                   //color: textColor,
                   decoration: BoxDecoration(
@@ -128,27 +131,97 @@ class _AttendancePageState extends State<AttendancePage> {
                       )
                     ],
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                //
-                //2nd Container
-                //
-
-                Container(
-                  height: 100,
-                  width: 320,
-                  //color: textColor,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 50,
+                      ),
+                      // Row(
+                      //   children: [
+                      //     Padding(
+                      //       padding: const EdgeInsets.fromLTRB(15, 0, 8, 0),
+                      //       child: Container(
+                      //         color: textColor,
+                      //         child: TextField(
+                      //           style: GoogleFonts.averiaGruesaLibre(
+                      //               color: maintextColor, fontSize: 25),
+                      //           decoration: const InputDecoration(
+                      //               border: InputBorder.none),
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Padding(
+                      //       padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                      //       child: Container(
+                      //         height: 40,
+                      //         width: 90,
+                      //         decoration: BoxDecoration(
+                      //             color: lightblue,
+                      //             borderRadius: BorderRadius.circular(30)),
+                      //         child: Center(
+                      //           child: Text(
+                      //             "75 %",
+                      //             style: GoogleFonts.averiaGruesaLibre(
+                      //               color: textColor,
+                      //               fontWeight: FontWeight.bold,
+                      //             ),
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
+                      const Divider(
+                        color: mainbackground,
+                        thickness: 2,
+                      ),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                color: lightblue,
+                                shape: BoxShape.circle,
+                                border: Border.all(color: textColor),
+                              ),
+                            ),
+                          ),
+                          Text(
+                            "/",
+                            style: GoogleFonts.averiaGruesaLibre(
+                                fontSize: 45, color: mainbackground),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                color: lightblue,
+                                shape: BoxShape.circle,
+                                border: Border.all(color: textColor),
+                              ),
+                              child: Center(
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(8, 8, 8, 1),
+                                  child: TextField(
+                                    style: GoogleFonts.averiaGruesaLibre(
+                                        color: textColor, fontSize: 25),
+                                    decoration: const InputDecoration(
+                                        border: InputBorder.none),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 50,
+                          ),
+                        ],
                       )
                     ],
                   ),
@@ -160,169 +233,193 @@ class _AttendancePageState extends State<AttendancePage> {
                 //2nd Container
                 //
 
-                Container(
-                  height: 100,
-                  width: 320,
-                  //color: textColor,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                //
-                //3nd Container
-                //
+                // Container(
+                //   height: 100,
+                //   width: 320,
+                //   //color: textColor,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // //
+                // //2nd Container
+                // //
 
-                Container(
-                  height: 100,
+                // Container(
+                //   height: 100,
+                //   width: 320,
+                //   //color: textColor,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // //
+                // //3nd Container
+                // //
 
-                  width: 320,
-                  //color: textColor,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                //
-                //2nd Container
-                //
+                // Container(
+                //   height: 100,
 
-                Container(
-                  height: 100,
-                  width: 320,
-                  //color: textColor,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                //
-                //2nd Container
-                //
+                //   width: 320,
+                //   //color: textColor,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // //
+                // //2nd Container
+                // //
 
-                Container(
-                  height: 100,
-                  width: 320,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                //
-                //2nd Container
-                //
+                // Container(
+                //   height: 100,
+                //   width: 320,
+                //   //color: textColor,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // //
+                // //2nd Container
+                // //
 
-                Container(
-                  height: 100,
-                  width: 320,
-                  //color: textColor,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                //
-                //2nd Container
-                //
+                // Container(
+                //   height: 100,
+                //   width: 320,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // //
+                // //2nd Container
+                // //
 
-                Container(
-                  height: 100,
-                  width: 320,
-                  //color: textColor,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                //
-                //2nd Container
-                //
+                // Container(
+                //   height: 100,
+                //   width: 320,
+                //   //color: textColor,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // //
+                // //2nd Container
+                // //
 
-                Container(
-                  height: 100,
-                  width: 320,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
+                // Container(
+                //   height: 100,
+                //   width: 320,
+                //   //color: textColor,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // //
+                // //2nd Container
+                // //
+
+                // Container(
+                //   height: 100,
+                //   width: 320,
+                //   decoration: BoxDecoration(
+                //     color: textColor,
+                //     borderRadius: BorderRadius.circular(30),
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         spreadRadius: 3,
+                //         blurRadius: 10,
+                //         offset: const Offset(0, 3),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
                 //
                 //2nd Container
                 //
