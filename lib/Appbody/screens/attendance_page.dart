@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:mannager/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../widgets/containerbox.dart';
+
 class AttendancePage extends StatefulWidget {
   const AttendancePage({super.key});
 
@@ -84,7 +86,7 @@ class _AttendancePageState extends State<AttendancePage> {
                     padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
                     child: Container(
                       height: 40,
-                      width: 90,
+                      width: 85,
                       decoration: BoxDecoration(
                           color: lightblue,
                           borderRadius: BorderRadius.circular(30)),
@@ -111,170 +113,15 @@ class _AttendancePageState extends State<AttendancePage> {
           scrollDirection: Axis.vertical,
           child: Center(
             child: Column(
-              children: [
+              children: const [
                 //
                 // begining of new container
                 //
-                Container(
-                  height: 150,
-                  width: 320,
-                  //color: textColor,
-                  decoration: BoxDecoration(
-                    color: textColor,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      )
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(7.0),
-                            child: Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: Container(
-                                width: 190,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: textColor,
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                child: TextField(
-                                  style: GoogleFonts.averiaGruesaLibre(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: maintextColor),
-                                  decoration: const InputDecoration(
-                                    hintText: "   enter Subject",
-                                    hintStyle: TextStyle(
-                                        fontSize: 15, color: Colors.white54),
-                                    border: InputBorder.none,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Container(
-                              height: 40,
-                              width: 90,
-                              decoration: BoxDecoration(
-                                  color: lightblue,
-                                  borderRadius: BorderRadius.circular(30)),
-                              child: Center(
-                                child: Text(
-                                  "75 %",
-                                  style: GoogleFonts.averiaGruesaLibre(
-                                    color: textColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Divider(
-                        color: mainbackground,
-                        thickness: 2,
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                color: lightblue,
-                                shape: BoxShape.circle,
-                                border: Border.all(color: textColor),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "/",
-                            style: GoogleFonts.averiaGruesaLibre(
-                                fontSize: 45, color: mainbackground),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                color: lightblue,
-                                shape: BoxShape.circle,
-                                border: Border.all(color: textColor),
-                              ),
-                              child: Center(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(8, 8, 8, 1),
-                                  child: TextField(
-                                    style: GoogleFonts.averiaGruesaLibre(
-                                        color: textColor, fontSize: 25),
-                                    decoration: const InputDecoration(
-                                        border: InputBorder.none),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 40,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                color: lightblue,
-                                shape: BoxShape.circle,
-                                border: Border.all(color: textColor),
-                              ),
-                              child: const Icon(
-                                Icons.add,
-                                color: textColor,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 15,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                color: lightblue,
-                                shape: BoxShape.circle,
-                                border: Border.all(color: textColor),
-                              ),
-                              child: const Icon(
-                                Icons.remove,
-                                color: textColor,
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
+                Mainboxcontainer(),
+                SizedBox(
                   height: 20,
                 ),
+
                 //
                 //2nd Container
                 //
