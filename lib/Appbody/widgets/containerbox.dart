@@ -13,6 +13,7 @@ class Mainboxcontainer extends StatefulWidget {
 }
 
 int plus = 0;
+int primaryresult = 0;
 
 class _MainboxcontainerState extends State<Mainboxcontainer> {
   void _plusincremnent() {
@@ -20,6 +21,28 @@ class _MainboxcontainerState extends State<Mainboxcontainer> {
       plus++;
     });
   }
+
+  void _minusdecremnent() {
+    setState(() {
+      if (plus == 0) {
+        plus = 0;
+      } else {
+        plus--;
+      }
+    });
+  }
+
+  final TextEditingController numberController = TextEditingController();
+
+  // void _maintryingfunction() {
+  //   setState(() {
+  //     if (numberController == plus) {
+  //       primaryresult = 100;
+  //     } else {
+  //       primaryresult = 0;
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -77,15 +100,7 @@ class _MainboxcontainerState extends State<Mainboxcontainer> {
                   decoration: BoxDecoration(
                       color: lightblue,
                       borderRadius: BorderRadius.circular(30)),
-                  child: Center(
-                    child: Text(
-                      "75 %",
-                      style: GoogleFonts.averiaGruesaLibre(
-                        color: textColor,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
+                  child: Center(child: GestureDetector()),
                 ),
               ),
             ],
@@ -133,12 +148,17 @@ class _MainboxcontainerState extends State<Mainboxcontainer> {
                     shape: BoxShape.circle,
                     border: Border.all(color: textColor),
                   ),
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 8, 8, 1),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 1, bottom: 2),
+                    child: Center(
                       child: TextField(
+                        controller: numberController,
+                        textAlign: TextAlign.center,
+                        keyboardType: TextInputType.number,
                         style: GoogleFonts.averiaGruesaLibre(
-                            color: textColor, fontSize: 25),
+                            color: textColor,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
                         decoration:
                             const InputDecoration(border: InputBorder.none),
                       ),
@@ -169,7 +189,7 @@ class _MainboxcontainerState extends State<Mainboxcontainer> {
                 width: 15,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: _minusdecremnent,
                 child: Container(
                   height: 50,
                   width: 50,

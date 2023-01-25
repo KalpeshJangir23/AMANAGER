@@ -72,7 +72,7 @@ class _AttendancePageState extends State<AttendancePage> {
                                 .format(DateTime.now()),
                             style: GoogleFonts.averiaGruesaLibre(
                                 color: textColor,
-                                fontSize: 24.0,
+                                fontSize: 20.0,
                                 fontWeight: FontWeight.w200),
                           ),
                         ),
